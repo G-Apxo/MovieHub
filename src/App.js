@@ -7,7 +7,7 @@ import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import MostLiked from './Components/MostLiked/MostLiked';
-
+import MovieDetails from './Components/Moviedetails';
 const App = () => {
   return (
     <Router>
@@ -32,6 +32,9 @@ const App = () => {
             </Route>
             <Route exact path="/contact-us">
               <ContactUs />
+            </Route>
+            <Route exact path="/movie/:id">
+              <MovieDetails />
             </Route>
           </div>
         </div>

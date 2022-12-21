@@ -1,10 +1,11 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function ResultWT(props) {
   console.log(props.movies);
   const Boxes = () => {
     return (
       <BoxWT
+        id={props.movies.id}
         key={props.movies.index}
         image={props.movies.poster_path}
         title={props.movies.original_title}
@@ -24,7 +25,16 @@ export default function ResultWT(props) {
 
 const BoxWT = (props) => {
   const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
+  
   return (
+    <Link 
+    to={ 
+      {
+        pathname: `/movie/${props.id}`,
+      }
+    }
+      
+  >  
     <div className="mp_wt_box">
       <div className="mp_wt_img_div">
         <img src={IMG_PATH + props.image} />
@@ -40,5 +50,6 @@ const BoxWT = (props) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };

@@ -28,8 +28,8 @@ const WTWrapper = () => {
   useEffect(() => {
     getData();
   }, []);
-
   return (
+   
     <div className="wt_wrapper">
       <div className="watch_today_movies">
         {loading ? (
@@ -46,6 +46,7 @@ const WTWrapper = () => {
         )}
       </div>
     </div>
+
   );
 };
 
